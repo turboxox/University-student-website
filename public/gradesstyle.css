@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.head-contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo h2 {
+  font-size: 24px;
+  color: black;
+  margin: 0;
+  font-weight: bold;
+}
+
+.logo .danger {
+  color: #101090;
+}
+
+/* Navigation Section */
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: black;
+  color: white;
+}
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+/*        grades */
+main h2 {
+  color: #0c324e;
+  background-color: #ebeef4;
+  margin-top: 0;
+  padding: 15px;
+  border-radius: 20px 20px 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+.notes {
+  background-color: white;
+  border: 1px solid rgb(224, 211, 211);
+  border-radius: 20px;
+}
+#semester {
+  width: 5cm;
+  height: 0.77cm;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin: 15px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+.search-btn {
+  height: 0.77cm;
+  padding: 0 15px;
+  border: 1px solid #0c324e;
+  border-radius: 10px;
+  background-color: #0c324e;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}

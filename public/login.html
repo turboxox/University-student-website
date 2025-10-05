@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylelogin.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <a href="/" class="logo">
+          <img
+            src="images/download-removebg-preview.png"
+            alt="estg"
+            class="logo_img"
+          />
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <a href="#" class="login">
+          <button class="login-btn">
+            <img src="images/loginimg.png" alt="imagelogin" class="login-img"  id="email"/>
+            Sign in
+          </button>
+        </a>
+      </nav>
+    </header>
+    <!-------------------------------------------------main-------------------------------------------------->
+
+    <main class="main-section">
+      <nav class="nav-main">
+        <h1>Sign in</h1>
+        <ul class="ul">
+          <li>
+            <input
+              type="email"
+              placeholder="Email"
+              class="input-field"
+              id="email"
+            />
+          </li>
+          <li id="password-cont">
+            <input
+              type="password"
+              placeholder="Password"
+              class="input-field"
+              id="password"
+            />
+            <img
+              src="images/eye open.png"
+              id="showicon"
+              alt="Eyes open"
+              class="eye-icon"
+            />
+            <img
+              src="images/eye.png"
+              id="hideicon"
+              alt="Eyes close"
+              class="eye-icon hidden"
+            />
+          </li>
+          <li><button class="signin">Sign in</button></li>
+          <li class="Reset"><a href="#">Reset password</a></li>
+          <li class="separator">
+            <span class="line"></span>
+            <span class="or-text">OR</span>
+            <span class="line"></span>
+          </li>
+          <li>
+            <button class="google-signin">
+              <img
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                alt="Google"
+                class="google-icon"
+              />
+              Sign in with Google
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <!--Footer-------------------------------------------------------------->
+
+    <footer id="about">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Adresse</h4>
+          <p>Avenur abdou maachar al balkhi B:P 1317 guelmim 81000</p>
+          <p>Tel: +212 5 28 77 00 00</p>
+        </div>
+        <div class="footer-section">
+          <h4>Filières DUT</h4>
+          <ul>
+            <li>Génie Informatique</li>
+            <li>Génie Électrique</li>
+            <li>technique de management</li>
+            <li>réseau Informatique et sécurité</li>
+            <li>Energies renouvelables et efficacité énergétique</li>
+            <li>ingénieurie des données</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Filières LP</h4>
+          <ul>
+            <li>LP Développement Web</li>
+            <li>LP Réseaux & Systèmes</li>
+            <li>LP Management</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scriptlogin.js"></script>
+  </body>
+</html>
