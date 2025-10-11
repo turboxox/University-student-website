@@ -28,7 +28,7 @@
         </ul>
         <a href="#" class="login">
           <button class="login-btn">
-            <img src="images/loginimg.png" alt="imagelogin" class="login-img"  id="email"/>
+            <img src="images/loginimg.png" alt="imagelogin" class="login-img" />
             Sign in
           </button>
         </a>
@@ -39,53 +39,72 @@
     <main class="main-section">
       <nav class="nav-main">
         <h1>Sign in</h1>
-        <ul class="ul">
-          <li>
-            <input
-              type="email"
-              placeholder="Email"
-              class="input-field"
-              id="email"
-            />
-          </li>
-          <li id="password-cont">
-            <input
-              type="password"
-              placeholder="Password"
-              class="input-field"
-              id="password"
-            />
-            <img
-              src="images/eye open.png"
-              id="showicon"
-              alt="Eyes open"
-              class="eye-icon"
-            />
-            <img
-              src="images/eye.png"
-              id="hideicon"
-              alt="Eyes close"
-              class="eye-icon hidden"
-            />
-          </li>
-          <li><button class="signin">Sign in</button></li>
-          <li class="Reset"><a href="#">Reset password</a></li>
-          <li class="separator">
-            <span class="line"></span>
-            <span class="or-text">OR</span>
-            <span class="line"></span>
-          </li>
-          <li>
-            <button class="google-signin">
-              <img
-                src="https://www.svgrepo.com/show/475656/google-color.svg"
-                alt="Google"
-                class="google-icon"
+        <form id="loginForm">
+          <ul class="ul">
+            <li>
+              <input
+                type="email"
+                placeholder="Email"
+                class="input-field"
+                id="email"
+                name="email"
+                required
               />
-              Sign in with Google
-            </button>
-          </li>
-        </ul>
+            </li>
+            <li id="password-cont">
+              <input
+                type="password"
+                placeholder="Password"
+                class="input-field"
+                id="password"
+                name="password"
+                required
+              />
+              <img
+                src="images/eye open.png"
+                id="showicon"
+                alt="Eyes open"
+                class="eye-icon"
+              />
+              <img
+                src="images/eye.png"
+                id="hideicon"
+                alt="Eyes close"
+                class="eye-icon hidden"
+              />
+            </li>
+            <!-- Error message display -->
+            <li>
+              <div
+                id="error-message"
+                style="
+                  color: #ff4444;
+                  font-size: 14px;
+                  display: none;
+                  text-align: center;
+                  margin: 10px 0;
+                "
+              ></div>
+            </li>
+            <li><button type="submit" class="signin">Sign in</button></li>
+            <li class="Reset"><a href="#">Reset password</a></li>
+            <li class="separator">
+              <span class="line"></span>
+              <span class="or-text">OR</span>
+              <span class="line"></span>
+            </li>
+            <li>
+              <button type="button" class="google-signin">
+                <img
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt="Google"
+                  class="google-icon"
+                />
+                Sign in with Google
+              </button>
+            </li>
+          </ul>
+        </form>
       </nav>
     </main>
 
@@ -120,6 +139,6 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="scriptlogin.js"></script>
+    <script src="js/scriptlogin.js"></script>
   </body>
 </html>
