@@ -57,7 +57,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     try {
         const response = await fetch('../backend/auth/login.php', {
             method: 'POST',
-            headers: {//telling php that we are sending json data
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ //convert the email and password to A json
@@ -66,6 +66,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             })
         });
         
+        //get response from the php
         const data = await response.json();
         
         if (data.success) {

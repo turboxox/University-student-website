@@ -1,4 +1,4 @@
-<?php require_once '../backend/auth/session_check.php'; ?>
+<?php require_once '../backend/auth/session_check.php'; ?> <!--for checking if the user is truely logged in -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +20,32 @@
     </div>
     <div class="section">
       <ul class="navbar">
-        <li><a href="profile.php">Profile</a></li>
-        <li><a href="#grades">Grades</a></li>
-        <li><a href="grades.html">Classes</a></li>
+        <li><a href="profil-etudiant.php">Profile</a></li>
+        <li><a href="grades.html">notes</a></li>
+        <li><a href="l">Classes</a></li>
       </ul>
-      <!--  Logout Button -->
-      <button onclick="logout()" class="logout-btn" style="background: #ff4444; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer; margin-left: 20px;">
-        Déconnexion
-      </button>
     </div>
+    <!--  Logout Button -->
+    <button class="cssbuttons-io-button" onclick="logout()">
+  Déconnexion
+  <div class="icon">
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </div>
+</button>
+
+
+
   </header>
 
   <div class="inform">
@@ -39,7 +56,7 @@
           <p>Chargement du profil...</p>
         </div>
 
-        <!-- Profile Content (Hidden until loaded) -->
+        <!-- Profile Content  -->
         <div id="profile-content" style="display: none;">
           <div class="top">
             <div class="profile-photo">

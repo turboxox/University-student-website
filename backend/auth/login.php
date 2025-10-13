@@ -1,9 +1,10 @@
 <?php
 session_start();
-header('Content-Type: application/json');
+header('Content-Type: application/json');//we are sending json back
 
 require_once '../config/db_config.php';
 
+//converting from json to php array (php://input is where the data is stored)
 $input = json_decode(file_get_contents('php://input'), true);
 
 $response = ['success' => false, 'message' => ''];
@@ -14,6 +15,8 @@ if (!isset($input['email']) || !isset($input['password'])) {
     echo json_encode($response);
     exit;
 }
+
+//take the email and password from input and store them inside $email and $password
 
 $email = trim($input['email']);
 $password = $input['password'];
@@ -69,4 +72,4 @@ try {
     error_log($e->getMessage());
 }
 
-echo json_encode($response);
+echo json_encode($response); //send the message response to the js

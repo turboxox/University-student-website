@@ -115,3 +115,26 @@ main h2 {
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
+/* --- Temporary styles for the table --- */
+.grades-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  display: none; /* hidden by default */
+}
+
+.grades-table th,
+.grades-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.grades-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.show {
+  display: table;
+}
