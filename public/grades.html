@@ -1,59 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="gradesstyle.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="gradesstyle.css" />
-</head>
-
-<body>
-  <header class="head-contain">
-    <div class="logo" title="est guelmim">
-      <img src="images/download-removebg-preview.png" alt="" />
-      <h2>E S T <span class="danger">G</span></h2>
-    </div>
-    <div class="section">
-      <ul class="navbar">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#grades">Grades</a></li>
-        <li><a href="#classe">Classes</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <h1>Salut , <b id="profile-prenom">...</b></h1>
-
-  <!---------------gardes------------------------------->
-  <main>
-    <div class="notes">
-      <h2>Suivi des notes</h2>
-      <div class="search">
-        <select id="semester">
-          <option value="s1">Semestre 1</option>
-          <option value="s2">Semestre 2</option>
-          <option value="s3">Semestre 3</option>
-          <option value="s4">Semestre 4</option>
-        </select>
-        <button class="search-btn" id="searchBtn">Search</button>
+  <body>
+    <header class="head-contain">
+      <div class="logo" title="est guelmim">
+        <img src="images/download-removebg-preview.png" alt="" />
+        <h2>E S T <span class="danger">G</span></h2>
       </div>
+      <div class="section">
+        <ul class="navbar">
+          <li><a href="profil-etudiant.php">Profile</a></li>
+          <li><a href="grades.html">notes</a></li>
+          <li><a href="l">Classes</a></li>
+        </ul>
+      </div>
+      <!--  Logout Button -->
+      <button class="cssbuttons-io-button" onclick="logout()">
+        Déconnexion
+        <div class="icon">
+          <svg
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </button>
+    </header>
 
-      <!-- Table placeholder -->
-      <table class="grades-table" id="gradesTable">
-        <thead>
-          <tr>
-            <th>Module</th>
-            <th>resultas</th>
-            <th>Note Exam</th>
-          </tr>
-        </thead>
-        <tbody id="gradesBody">
-        </tbody>
-      </table>
-    </div>
-  </main>
-  <script src="js/scriptgrades.js"></script>
-</body>
+    <h1>Salut , <b id="profile-prenom">...</b></h1>
 
+    <!---------------grades------------------------------->
+    <main>
+      <div class="notes">
+        <h2>Suivi des notes</h2>
+        <div class="search">
+          <select id="semester">
+            <option value="">-- Choisir un semestre --</option>
+            <option value="s1">Semestre 1</option>
+            <option value="s2">Semestre 2</option>
+            <option value="s3">Semestre 3</option>
+            <option value="s4">Semestre 4</option>
+          </select>
+          <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+
+        <!-- LOADING STATE -->
+        <div
+          id="grades-loading"
+          style="display: none; text-align: center; padding: 30px"
+        >
+          <p>Chargement des notes...</p>
+        </div>
+
+        <!-- GRADES TABLE (Hidden initially) -->
+        <div id="grades-content" style="display: none; margin-top: 30px">
+          <table id="grades-table">
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Note</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody id="grades-tbody">
+              <!-- Grades will be inserted here by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ERROR STATE -->
+        <div
+          id="grades-error"
+          style="display: none; color: red; text-align: center; padding: 30px"
+        >
+          <p id="error-message">Aucune note trouvée pour ce semestre</p>
+        </div>
+
+        <!-- NO SELECTION MESSAGE -->
+        <div
+          id="no-selection"
+          style="text-align: center; padding: 30px; color: #666"
+        >
+          <p>Sélectionnez un semestre pour voir vos notes</p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/scriptgrades.js"></script>
+  </body>
 </html>
