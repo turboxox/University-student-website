@@ -13,32 +13,32 @@ Built as part of my university coursework to demonstrate full-stack web developm
 ✨ Features
 Authentication
 
-✅ Secure login system with email and password
-✅ Session-based authentication
-✅ Password hashing using bcrypt
-✅ Session timeout (30 minutes of inactivity)
-✅ Logout functionality with confirmation
+ Secure login system with email and password
+ Session-based authentication
+ Password hashing using bcrypt
+ Session timeout (30 minutes of inactivity)
+ Logout functionality with confirmation
 
 Student Profile
 
-✅ Display student information (name, ID, email, phone, etc.)
-✅ Real-time data fetching from database
-✅ Loading states and error handling
+ Display student information (name, ID, email, phone, etc.)
+ Real-time data fetching from database
+ Loading states and error handling
 
 Grades Management
 
-✅ View grades filtered by semester (S1, S2, S3, S4)
-✅ Display module name, grade, and status (Validated/Not Validated/Rattrapage)
-✅ Dynamic table generation
-✅ Visual status indicators
+ View grades filtered by semester (S1, S2, S3, S4)
+ Display module name, grade, and status (Validated/Not Validated/Rattrapage)
+ Dynamic table generation
+ Visual status indicators
 
 Security
 
-✅ SQL injection prevention using prepared statements
-✅ Password encryption (bcrypt)
-✅ Server-side session management
-✅ Protected routes (unauthorized access prevention)
-✅ Input validation (client and server-side)
+ SQL injection prevention using prepared statements
+ Password encryption (bcrypt)
+ Server-side session management
+ Protected routes (unauthorized access prevention)
+ Input validation (client and server-side)
 
 
 🛠️ Technologies Used
